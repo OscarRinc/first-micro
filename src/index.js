@@ -1,10 +1,23 @@
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import NextT from './View/NextT';
+import Third from './View/Third';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Primera pantalla del micro</Text>
-    </View>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="NextT"
+          component={NextT}
+        />
+        <Stack.Screen
+          name="ThirsdScreen"
+          component={Third}
+        />
+      </Stack.Navigator>
   );
 }
 

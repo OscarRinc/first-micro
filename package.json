@@ -1,6 +1,6 @@
 {
   "name": "fisrt-micro",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "First micro front for test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -29,7 +29,7 @@
   "scripts": {
     "test": "jest",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint": "eslint \"**/*.{js}\"",
     "prepack": "bob build",
     "release": "release-it",
     "example": "yarn --cwd example",
@@ -38,7 +38,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "micro"
   ],
   "repository": "https://github.com/OscarRinc/fisrt-micro",
   "author": "Oscar Rincon <orincon666@gmail.com> (https://github.com/OscarRinc)",
@@ -77,7 +78,8 @@
   },
   "peerDependencies": {
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "@react-navigation/native-stack": "*"
   },
   "engines": {
     "node": ">= 16.0.0"
@@ -149,5 +151,8 @@
       "commonjs",
       "module"
     ]
+  },
+  "dependencies": {
+    "@react-navigation/native-stack": "^6.9.13"
   }
 }
